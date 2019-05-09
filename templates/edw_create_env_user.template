@@ -1,0 +1,32 @@
+.run file ${logon_file}
+
+----------------------------------------------------------------------------
+-- executed by user "EdwAdmin "
+----------------------------------------------------------------------------
+/*
+EdwAdmin
+    ${env}_Admin         : USR
+        ${env}_Stage     : DB
+        ${env}_Core      : DB
+        ${env}_Access    : DB
+*/
+----------------------------------------------------------------------------
+
+CREATE USER ${env}_Admin           FROM EdwAdmin  AS  PASSWORD=${env}_Admin        PERM=0  NO FALLBACK   COLLATION = HOST;
+
+CREATE USER ${env}_Stage_Admin     FROM ${env}_Admin AS  PASSWORD=${env}_Stage_Admin  PERM=0  NO FALLBACK   COLLATION = HOST;
+
+CREATE USER ${env}_Core_Admin      FROM ${env}_Admin AS  PASSWORD=${env}_Core_Admin   PERM=0  NO FALLBACK   COLLATION = HOST;
+
+CREATE USER ${env}_Access_Admin    FROM ${env}_Admin AS  PASSWORD=${env}_Access_Admin PERM=0  NO FALLBACK   COLLATION = HOST;
+
+----------------------------------------------------------------------------
+grant create user , drop user , create database , drop database  on ${env}_Stage_Admin to ${env}_Stage_Admin with grant option;
+
+grant create user , drop user , create database , drop database  on ${env}_Core_Admin to ${env}_Core_Admin with grant option;
+
+grant create user , drop user , create database , drop database  on ${env}_Access_Admin to ${env}_Access_Admin with grant option;
+
+----------------------------------------------------------------------------
+.logoff
+.quit

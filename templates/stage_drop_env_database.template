@@ -1,0 +1,41 @@
+.run file ${logon_file}
+
+DELETE DATABASE ${env}_Stage_Master_Proc          ;
+DELETE DATABASE ${env}_Stage_Master_Landing           ;
+DELETE DATABASE ${env}_Stage_Master_History           ;
+DELETE DATABASE ${env}_Stage_Master_SIM           ;
+DELETE DATABASE ${env}_Stage_Master_SIM_V           ;
+
+DELETE DATABASE ${env}_Stage_Ref_Proc          ;
+DELETE DATABASE ${env}_Stage_Ref_Landing           ;
+DELETE DATABASE ${env}_Stage_Ref_History           ;
+DELETE DATABASE ${env}_Stage_Ref_SIM           ;
+DELETE DATABASE ${env}_Stage_Ref_SIM_V           ;
+
+DELETE DATABASE ${env}_Stage_Trans_Proc          ;
+DELETE DATABASE ${env}_Stage_Trans_Landing           ;
+DELETE DATABASE ${env}_Stage_Trans_History           ;
+DELETE DATABASE ${env}_Stage_Trans_SIM           ;
+DELETE DATABASE ${env}_Stage_Trans_SIM_V           ;
+
+
+DROP DATABASE ${env}_Stage_Master_Proc          ;
+DROP DATABASE ${env}_Stage_Master_Landing           ;
+DROP DATABASE ${env}_Stage_Master_History           ;
+DROP DATABASE ${env}_Stage_Master_SIM           ;
+DROP DATABASE ${env}_Stage_Master_SIM_V           ;
+
+DROP DATABASE ${env}_Stage_Ref_Proc          ;
+DROP DATABASE ${env}_Stage_Ref_Landing           ;
+DROP DATABASE ${env}_Stage_Ref_History           ;
+DROP DATABASE ${env}_Stage_Ref_SIM           ;
+DROP DATABASE ${env}_Stage_Ref_SIM_V           ;
+
+DROP DATABASE ${env}_Stage_Trans_Proc          ;
+DROP DATABASE ${env}_Stage_Trans_Landing           ;
+DROP DATABASE ${env}_Stage_Trans_History           ;
+DROP DATABASE ${env}_Stage_Trans_SIM           ;
+DROP DATABASE ${env}_Stage_Trans_SIM_V           ;
+
+.logoff
+.quit

@@ -1,0 +1,46 @@
+
+----------------------------------------------------------------------------
+-- Stage Master
+----------------------------------------------------------------------------
+CREATE DATABASE ${env}_Stage_Master_Proc          FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+CREATE DATABASE ${env}_Stage_Master_Landing           FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+CREATE DATABASE ${env}_Stage_Master_History           FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+CREATE DATABASE ${env}_Stage_Master_SIM           FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+CREATE DATABASE ${env}_Stage_Master_SIM_V           FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+
+grant select, insert, update, delete on ${env}_Stage_Master_Landing to ${env}_Stage_Master_Proc with grant option;
+grant select, insert, update, delete on ${env}_Stage_Master_History to ${env}_Stage_Master_Proc with grant option;
+grant select, insert, update, delete on ${env}_Stage_Master_SIM     to ${env}_Stage_Master_Proc with grant option;
+
+grant select on ${env}_Stage_Master_SIM     to ${env}_Stage_Master_SIM_V with grant option;
+
+----------------------------------------------------------------------------
+-- Stage Ref
+----------------------------------------------------------------------------
+CREATE DATABASE ${env}_Stage_Ref_Proc          FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+CREATE DATABASE ${env}_Stage_Ref_Landing           FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+CREATE DATABASE ${env}_Stage_Ref_History           FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+CREATE DATABASE ${env}_Stage_Ref_SIM           FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+CREATE DATABASE ${env}_Stage_Ref_SIM_V           FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+
+grant select, insert, update, delete on ${env}_Stage_Ref_Landing to ${env}_Stage_Ref_Proc with grant option;
+grant select, insert, update, delete on ${env}_Stage_Ref_History to ${env}_Stage_Ref_Proc with grant option;
+grant select, insert, update, delete on ${env}_Stage_Ref_SIM     to ${env}_Stage_Ref_Proc with grant option;
+
+grant select on ${env}_Stage_Ref_SIM     to ${env}_Stage_Ref_SIM_V with grant option;
+
+----------------------------------------------------------------------------
+-- Stage Trans
+----------------------------------------------------------------------------
+CREATE DATABASE ${env}_Stage_Trans_Proc          FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+CREATE DATABASE ${env}_Stage_Trans_Landing           FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+CREATE DATABASE ${env}_Stage_Trans_History           FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+CREATE DATABASE ${env}_Stage_Trans_SIM           FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+CREATE DATABASE ${env}_Stage_Trans_SIM_V           FROM ${env}_Stage_Admin  AS  PERM=0  NO FALLBACK   ;
+
+grant select, insert, update, delete on ${env}_Stage_Trans_Landing to ${env}_Stage_Trans_Proc with grant option;
+grant select, insert, update, delete on ${env}_Stage_Trans_History to ${env}_Stage_Trans_Proc with grant option;
+grant select, insert, update, delete on ${env}_Stage_Trans_SIM     to ${env}_Stage_Trans_Proc with grant option;
+
+grant select on ${env}_Stage_Trans_SIM     to ${env}_Stage_Trans_SIM_V with grant option;
+

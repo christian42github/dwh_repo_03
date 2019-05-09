@@ -1,0 +1,6 @@
+-- using tdwallet: $tdwallet(alias)
+-- consider to incorporate $(tdpid) at runtime: $tdwallet(alias_$(tdpid))
+.logon  ${td_sys_name}/EdwAdmin,EdwAdmin
+.set width 128
+.set maxerror 1
+

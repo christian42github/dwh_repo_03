@@ -1,0 +1,24 @@
+----------------------------------------------------------------------------
+/*
+
+executed by user "EdwAdmin "
+
+variables {env}
+
+*/
+----------------------------------------------------------------------------
+DELETE DATABASE ${env}_Stage_Admin     ;
+
+DELETE DATABASE ${env}_Core_Admin      ;
+
+DELETE DATABASE ${env}_Access_Admin    ;
+
+DELETE DATABASE ${env}_Admin           ;
+
+DROP USER ${env}_Stage_Admin     ;
+
+DROP USER ${env}_Core_Admin      ;
+
+DROP USER ${env}_Access_Admin    ;
+
+DROP USER ${env}_Admin           ;

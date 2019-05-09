@@ -1,0 +1,5 @@
+.logon  ${td_sys}/${env}_Stage_Admin,${env}_Stage_Admin
+.set width 128
+.set maxerror 1
+
+

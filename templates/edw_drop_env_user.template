@@ -1,0 +1,21 @@
+.run file ${logon_file}
+
+DELETE USER ${env}_Stage_Admin     ;
+
+DELETE USER ${env}_Core_Admin      ;
+
+DELETE USER ${env}_Access_Admin    ;
+
+DELETE USER ${env}_Admin           ;
+
+
+DROP USER ${env}_Stage_Admin     ;
+
+DROP USER ${env}_Core_Admin      ;
+
+DROP USER ${env}_Access_Admin    ;
+
+DROP USER ${env}_Admin           ;
+
+.logoff
+.quit
